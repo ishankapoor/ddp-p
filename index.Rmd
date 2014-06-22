@@ -1,0 +1,65 @@
+---
+title       : Developing Data Products Project Presentation
+subtitle    : Slidify + Shiny
+author      : Ishan Kapoor
+job         : Developing Data Products
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [shiny, interactive]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+ext_widgets : {rCharts: [libraries/nvd3]}
+---
+
+
+## Course Project : Sliders
+
+- Project is available at [https://ikapoor-devdataprod.shinyapps.io/ikapoor-devdataprod](https://ikapoor-devdataprod.shinyapps.io/ikapoor-devdataprod)
+- Below is a screnshot of the application.
+
+<img src=project.jpg></img>
+
+---
+
+## Course Project : Sliders
+
+
+  
+  - Project has custom format of slider scale ($)
+
+  - Has various slider types for input
+
+  - Has reactive <code>code</code> Which computes the sum of Integer and Decimal.
+
+---
+
+
+## Interactive Charts
+
+- Example of some fancy rCharts within Slidify
+
+```{r echo = F, results = 'asis'}
+require(rCharts)
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
+            data = subset(haireye, Sex == 'Male'))
+n1$print('chart1')
+```
+
+---
+
+### Simple R code
+
+-Some rather simple R code executed within Slidify
+
+
+```{r}
+a <- 42
+A <- a * 2
+print(A)
+```
+
+
+
+
+
